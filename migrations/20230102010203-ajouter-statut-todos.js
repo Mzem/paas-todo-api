@@ -7,6 +7,9 @@ module.exports = {
       defaultValue: "EN_COURS",
       allowNull: false
     })
+    
+  // Il manque quelque chose ici...  A vous de l'ajouter !
+  // Indice : vous aurez besoin de queryInterface.sequelize.query(...)
   },
 
   async down(queryInterface, Sequelize) {
