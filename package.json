@@ -5,11 +5,13 @@
   "scripts": {
     "start": "node app.js",
     "start:watch": "nodemon app.js",
+    "start:worker": "node worker.js",
     "migrate": "sequelize db:migrate",
     "migrate:undo": "sequelize db:migrate:undo"
   },
   "author": "OCTO",
   "license": "ISC",
+  "date_echeance": "2023-01-03T10:10:10+01:00",
   "description": "",
   "dependencies": {
     "bull": "^4.8.5",

@@ -15,7 +15,7 @@ workQueue.process(async (job) => {
   try {
     // Mise à jour du statut des ToDos reçus dans le JOB
     await sequelize.query(
-      `UPDATE todos SET status = 'EN_RETARD' WHERE id = ?`,
+      `UPDATE todos SET statut = 'EN_RETARD' WHERE id = ?`,
       {
         replacements: [job.data.idTodo]
       }
