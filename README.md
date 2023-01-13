@@ -15,3 +15,20 @@
    1. Configurer le démarrage en mode WEB et WORKER via le `Procfile`
    2. Provisionner un Redis sur Scalingo
    3. Déployer (automatique lors d'un push du master local sur master du repo en remote)
+
+
+Pour tester le worker en local:
+
+1er terminal :
+`docker compose up -d`
+`npm run migrate`
+`npm run start`
+2e terminal :
+`node worker.js`
+3e terminal :
+`curl -X POST -H "Content-Type: application/json" localhost:3000/todos -d '{"description":"ahahah", "date_echeance":"2023-01-11T12:24:30+01:00"}'`
+
+http://localhost:3000/todos
+
+autre terminal :
+`node clean-todos.js`
