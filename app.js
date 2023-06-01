@@ -1,13 +1,13 @@
-require("dotenv").config()
-const express = require("express")
-const app = express()
-app.use(express.json())
+require("dotenv").config();
+const express = require("express");
+const app = express();
+app.use(express.json());
 
 app.get("/", function (req, res) {
-  res.send(`Hello World!`)
-})
+  res.send(`Hello World!msl` + process.env.TEST);
+});
 
-const port = process.env.PORT
+const port = process.env.PORT;
 app.listen(port, function () {
-  console.log(`ToDo API listening on port ${port}`)
-})
+  console.log(`ToDo API listening on port ${port}`);
+});
